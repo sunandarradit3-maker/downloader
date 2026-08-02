@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#08090f">
+  <meta name="description" content="DiTz Downloader — downloader video dan audio cepat, responsif, dan bersih.">
+  <meta property="og:title" content="DiTz Downloader">
+  <meta property="og:description" content="Download media publik secara cepat dan responsif.">
+  <meta property="og:type" content="website">
+  <title>DiTz Downloader — Video & MP3 Super Cepat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <div class="noise"></div>
+    <header class="nav shell">
+      <a class="brand" href="#top" aria-label="DiTz Downloader">
+        <span class="brand-mark" data-icon="download"></span>
+        <span><b>DiTz</b> Downloader</span>
+      </a>
+      <div class="nav-status"><span class="pulse"></span> Server Online</div>
+    </header>
+
+    <section id="top" class="hero shell">
+      <div class="eyebrow"><span data-icon="spark"></span> FAST • CLEAN • RESPONSIVE</div>
+      <h1>Download video & audio<br><span>secepat kilat.</span></h1>
+      <p class="hero-copy">Tempel tautan publik, pilih format, lalu ambil file. Tanpa tampilan ribet, tanpa iklan mengganggu.</p>
+
+      <div class="downloader-card">
+        <div class="tabs" role="tablist">
+          <button class="active" type="button" data-tab="url"><span data-icon="link"></span> Download URL</button>
+          <button type="button" data-tab="music"><span data-icon="music"></span> Cari Musik</button>
+        </div>
+
+        <form id="url-panel" class="panel-form">
+          <label class="input-wrap">
+            <span class="input-icon" data-icon="link"></span>
+            <input id="media-url" placeholder="Tempel link TikTok, YouTube, Instagram..." inputmode="url" autocomplete="url" required>
+            <span id="detect" class="detect">Auto Detect</span>
+          </label>
+          <div class="options-row">
+            <div class="segmented" aria-label="Format">
+              <button class="selected" type="button" data-mode="video">MP4 Video</button>
+              <button type="button" data-mode="audio">MP3 Audio</button>
+            </div>
+            <select id="quality" aria-label="Kualitas">
+              <option value="max">Kualitas Maksimal</option>
+              <option value="1080" selected>1080p Full HD</option>
+              <option value="720">720p HD</option>
+              <option value="480">480p</option>
+              <option value="360">360p</option>
+            </select>
+          </div>
+          <button id="process-btn" class="primary-btn" type="submit"><span data-icon="bolt"></span> Proses Sekarang <span data-icon="arrow"></span></button>
+          <div id="result" aria-live="polite"></div>
+          <p class="legal">Gunakan hanya untuk konten milik sendiri, berizin, atau domain publik. Tidak mendukung DRM atau konten privat.</p>
+        </form>
+
+        <section id="music-panel" class="music-panel hidden">
+          <form id="music-form" class="music-search">
+            <span data-icon="search"></span>
+            <input id="music-query" placeholder="Cari judul lagu atau nama artis..." autocomplete="off">
+            <button type="submit">Cari</button>
+          </form>
+          <div class="music-note">Cuplikan resmi ±30 detik • aman untuk preview</div>
+          <div id="music-results"></div>
+          <div id="music-empty" class="music-empty"><div class="disc"><span data-icon="music"></span></div><b>Temukan musik favorit</b><span>Cari lagu lalu putar atau unduh cuplikan resminya.</span></div>
+        </section>
+      </div>
+      <div class="platforms" aria-label="Platform didukung"><span>TikTok</span><span>YouTube</span><span>Instagram</span><span>Facebook</span><span>X</span><span>SoundCloud</span><span>Pinterest</span><span>Reddit</span></div>
+    </section>
+
+    <section class="features shell">
+      <article><span data-icon="bolt"></span><div><b>Respons Instan</b><p>UI vanilla ringan dan Vercel Functions untuk waktu respons rendah.</p></div></article>
+      <article><span data-icon="shield"></span><div><b>Privasi Dijaga</b><p>Tautan tidak disimpan ke database dan validasi SSRF aktif di backend.</p></div></article>
+      <article><span data-icon="spark"></span><div><b>Tanpa Gangguan</b><p>Tidak ada pop-up, redirect jebakan, atau iklan yang memenuhi layar.</p></div></article>
+    </section>
+
+    <footer class="shell"><span>© 2026 DiTz Store</span><span>Built for speed.</span></footer>
+  </main>
+</body>
+</html>
